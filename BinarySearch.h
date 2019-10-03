@@ -80,16 +80,18 @@ bool BinarySearch<T>::binary_search(const T *array, int begin, int end, T target
         // Achou o valor desejado
         return true;
     } else {
+        // Condicao de parada do algoritmo recursivo
         if (begin == end) {
-            // Condicao de parada do algoritmo recursivo
             return false;
-        } else if (target > valueInPos) {
-            // Nao achou e o valor pode estar na parte de cima do array
-            return binary_search(array, position+1, size-1, target, (size-position-1));
-        } else {
-            // Nao achou e o valor pode estar na parte de baixo do array
-            return binary_search(array, 0, position-1, target, position);
         }
+
+        // Nao achou e o valor pode estar na parte de cima do array
+        if (target > valueInPos) {
+            return binary_search(array, position+1, size-1, target, (size-position-1));
+        }
+
+        // Nao achou e o valor pode estar na parte de baixo do array
+        return binary_search(array, 0, position-1, target, position);
     }
 }
 
