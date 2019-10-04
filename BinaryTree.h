@@ -20,8 +20,6 @@ private:
     Node<T> *root;
 };
 
-//#include "BinarySearch.cpp"
-
 template<typename T>
 BinaryTree<T>::BinaryTree(Node<T> *root): root(root) {
 
@@ -39,17 +37,21 @@ bool BinaryTree<T>::find(const T &data) const {
 template<typename T>
 bool BinaryTree<T>::find(Node<T> *node, const T &data) const {
     if (node == nullptr) {
+        //cout << "x" << endl;
         return false;
     }
 
     if (node->getData() == data) {
+        //cout << "o" << endl;
         return true;
     }
 
     if (data < node->getData()) {
+        //cout << "<--" << endl;
         return find(node->left(), data);
     }
 
+    //cout << "-->" << endl;
     return find(node->right(), data);
 }
 

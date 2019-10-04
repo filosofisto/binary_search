@@ -12,6 +12,12 @@ int main() {
     cout << "Binary Search Sample with C++ Templates" << endl;
     cout << "----------------------------------------" << endl;
 
+    cout << "                         15" << endl;
+    cout << "                 6                18" << endl;
+    cout << "             3       7        17       20" << endl;
+    cout << "         2       4       13" << endl;
+    cout << "                     9" << endl;
+
     // left path
     auto node15 = new Node<int>(15); //root
     auto node6 = new Node<int>(6);
