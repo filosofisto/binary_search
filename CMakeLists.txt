@@ -3,4 +3,4 @@ project(BinarySearch)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(BinarySearch main.cpp BinarySearch.h Node.cpp Node.h BinaryTree.h)
+add_executable(BinarySearch main.cpp BinarySearch.h)
